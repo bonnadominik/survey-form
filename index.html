@@ -40,21 +40,23 @@
                     </select>
                 </li>
                 <li>
-                    <p>Would you recommend my survey to a friend?</p>
-                        <ul>
-                            <li>
-                                <input type="radio" id="recommend-choice-1" name="recommend-section" value="definitely">
-                                <label for="recommend-choice-1">Definitely</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="recommend-choice-2" name="recommend-section" value="maybe">
-                                <label for="recommend-choice-2">Maybe</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="recommend-choice-3" name="recommend-section" value="not-sure">
-                                <label for="recommend-choice-3">Not sure</label>
-                            </li>
-                        </ul>
+                    <fieldset>
+                        <legend>Would you recommend my survey to a friend?</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="recommend-choice-1" name="recommend-section" value="definitely">
+                                    <label for="recommend-choice-1">Definitely</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="recommend-choice-2" name="recommend-section" value="maybe">
+                                    <label for="recommend-choice-2">Maybe</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="recommend-choice-3" name="recommend-section" value="not-sure">
+                                    <label for="recommend-choice-3">Not sure</label>
+                                </li>
+                            </ul>
+                    </fieldset>
                 </li>
                 <li>
                     <label for="music-info">What kind of music do you like?</label>
@@ -68,7 +70,38 @@
                     </select>
                 </li>
                 <li>
-                    
+                    <fieldset>
+                        <legend>Choose your interests</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="coding" name="interest" value="coding" checked>
+                                <label for="coding">Coding</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="soccer" name="interest" value="soccer">
+                                <label for="soccer">Soccer</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="interest" id="basketball" value="basketball">
+                                <label for="basketball">Basketball</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="interest" id="boxing" value="boxing">
+                                <label for="boxing">Boxing</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="interest" id="motorcycles" value="motorcycles">
+                                <label for="motorcycles">motorcycles</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="comments">Any comments or suggestions?</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10">Enter your comment here...</textarea>
+                </li>
+                <li>
+                    <input type="submit" name="submit-btn" id="submit-btn">
                 </li>
             </ul>
         </form>
