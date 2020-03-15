@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+            Thank you for taking the time to read this invalid text.
+        </p>
+    </header>
+    <main>
+        <form action="#" method="GET" id="survey-form">
+            <ul>
+                <li>
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+                </li>
+                <li>
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" name="user_email" placeholder="Enter your Email" required>
+                </li>
+                <li>
+                    <label for="number" id="number-label">Age<span>(optional)</span></label>
+                    <input type="number" id="number" name="user_age" placeholder="Age" min="4" max="120">
+                </li>
+                <li>
+                    <label for="dropdown">Which option best describes your current role?</label>
+                    <select name="current-role" id="dropdown">
+                        <option value="default" selected disabled>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="fulltime">Full Time Job</option>
+                        <option value="learner">Full Time Learner</option>
+                        <option value="not-say">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </li>
+                <li>
+                    <p>Would you recommend my survey to a friend?</p>
+                        <ul>
+                            <li>
+                                <input type="radio" id="recommend-choice-1" name="recommend-section" value="definitely">
+                                <label for="recommend-choice-1">Definitely</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="recommend-choice-2" name="recommend-section" value="maybe">
+                                <label for="recommend-choice-2">Maybe</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="recommend-choice-3" name="recommend-section" value="not-sure">
+                                <label for="recommend-choice-3">Not sure</label>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <label for="music-info">What kind of music do you like?</label>
+                    <select name="dropdown" id="music-info">
+                        <option value="default" selected disabled>Select an option</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="rap">Rap</option>
+                        <option value="another">Another</option>
+                    </select>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </form>
+    </main>
+</body>
+</html>
