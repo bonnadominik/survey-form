@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,700&display=swap&subset=latin-ext');
+:root{
+    --roboto-condensed: 'Roboto Condensed', sans-serif;
+    --pacifico: 'Pacifico', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:  url(/imgs/background.jpg) no-repeat center;
+    font-family: var(--roboto-condensed);
+    color: rgb(214, 214, 214);
+}
+
+header{
+    padding: 50px 40px 40px;
+    text-align: center;
+}
+
+header #title{
+    font-family: var(--pacifico);
+    font-size: 70px;
+    line-height: .85em;
+}
+
+header #description{
+    padding-top: 30px;
+    line-height: 1.3em;
+}
+
+.background{
+    background-color: rgba(44, 74, 173, 0.712);
+    height: 100vh;
+}
+
+main ul{
+    list-style: none;
+}
+
+main{
+    background-color: rgba(32, 39, 131, 0.75);
+    padding: 40px
+}
+
+main input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+

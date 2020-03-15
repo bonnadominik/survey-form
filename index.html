@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Survey Form</title>
 </head>
 <body>
+<div class="background">
     <header>
         <h1 id="title">Survey Form</h1>
         <p id="description">
@@ -43,15 +45,15 @@
                     <fieldset>
                         <legend>Would you recommend my survey to a friend?</legend>
                             <ul>
-                                <li>
+                                <li class="radio-btn">
                                     <input type="radio" id="recommend-choice-1" name="recommend-section" value="definitely">
                                     <label for="recommend-choice-1">Definitely</label>
                                 </li>
-                                <li>
+                                <li class="radio-btn">
                                     <input type="radio" id="recommend-choice-2" name="recommend-section" value="maybe">
                                     <label for="recommend-choice-2">Maybe</label>
                                 </li>
-                                <li>
+                                <li class="radio-btn">
                                     <input type="radio" id="recommend-choice-3" name="recommend-section" value="not-sure">
                                     <label for="recommend-choice-3">Not sure</label>
                                 </li>
@@ -101,10 +103,11 @@
                     <textarea name="comments" id="comments" cols="30" rows="10">Enter your comment here...</textarea>
                 </li>
                 <li>
-                    <input type="submit" name="submit-btn" id="submit-btn">
+                    <input type="submit" name="submit-btn" id="submit-btn" value="Submit">
                 </li>
             </ul>
         </form>
     </main>
+</div>
 </body>
 </html>
