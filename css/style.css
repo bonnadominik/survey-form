@@ -2,6 +2,9 @@
 :root{
     --roboto-condensed: 'Roboto Condensed', sans-serif;
     --pacifico: 'Pacifico', cursive;
+    --orange: #FF9670;
+    --darkest-blue: rgba(44, 74, 173, 0.712);
+    --lightest-blue: rgba(125, 155, 255, 0.75);
 }
 
 *{
@@ -11,7 +14,7 @@
 }
 
 body{
-    background:  url(/imgs/background.jpg) no-repeat center;
+    background:  url(/imgs/background.jpg) no-repeat fixed center;
     font-family: var(--roboto-condensed);
     color: rgb(214, 214, 214);
 }
@@ -25,6 +28,7 @@ header #title{
     font-family: var(--pacifico);
     font-size: 70px;
     line-height: .85em;
+    color: var(--orange);
 }
 
 header #description{
@@ -33,8 +37,8 @@ header #description{
 }
 
 .background{
-    background-color: rgba(44, 74, 173, 0.712);
-    height: 100vh;
+    background-color: var(--darkest-blue);
+    height: 100%;
 }
 
 main ul{
@@ -42,15 +46,39 @@ main ul{
 }
 
 main{
-    background-color: rgba(32, 39, 131, 0.75);
-    padding: 40px
+    background-color: var(--lightest-blue);;
+    padding: 40px;
+    margin: 0 15px 0 15px;
+    border-radius: 6px;
 }
 
-main input{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+form ul li{
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+
+form ul li input[type=text], form ul li input[type=email],form ul li input[type=number], form ul li select, form ul li textarea{
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* form ul li input[type=text], form ul li input[type=email],form ul li input[type=number]:focus{
+    border: 2px solid #FF9670;
+} */
 
 
 
