@@ -71,11 +71,14 @@ form ul li{
 form ul li input[type=text], form ul li input[type=email],form ul li input[type=number], form ul li select, form ul li textarea{
     width: 100%;
     padding: 8px 15px;
+    box-shadow: 0 0 0 2px #fff;
     border: none;
     border-radius: 5px;
+    background-color: var(--darkest-blue);
     margin-top: 5px;
     font-size: 15px;
     outline: none;
+    color: #fff;
 }
 
 form ul li input[type=text]:focus, form ul li input[type=email]:focus, form ul li input[type=number]:focus, form ul li select:focus{
@@ -86,6 +89,13 @@ form ul li select{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background-image: none;
+}
+
+form ul li select::after{
+    content: '\25BC';
+    position: absolute;
+    color: black;
 }
 
 label span{
@@ -119,6 +129,7 @@ form ul li legend{
     height: 20px;
     border-radius: 50%;
     border: 2px solid #fff;
+    background-color: var(--darkest-blue);
     position: absolute;
 }
 
@@ -158,6 +169,7 @@ form ul li legend{
     width: 20px;
     height: 20px;
     border: 2px solid #fff;
+    background-color: var(--darkest-blue);
     position: absolute;
 }
 
