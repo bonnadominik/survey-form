@@ -16,7 +16,7 @@
 body{
     background:  url(/imgs/background.jpg) no-repeat fixed center;
     font-family: var(--roboto-condensed);
-    color: rgb(214, 214, 214);
+    color: #fff;
 }
 
 header{
@@ -34,6 +34,7 @@ header #title{
 header #description{
     padding-top: 30px;
     line-height: 1.3em;
+    font-size: 1.2em;
 }
 
 .background{
@@ -60,7 +61,7 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
-  }
+}
 
 form ul li{
     font-size: 20px;
@@ -74,11 +75,77 @@ form ul li input[type=text], form ul li input[type=email],form ul li input[type=
     border-radius: 5px;
     margin-top: 5px;
     font-size: 15px;
+    outline: none;
 }
 
-/* form ul li input[type=text], form ul li input[type=email],form ul li input[type=number]:focus{
-    border: 2px solid #FF9670;
-} */
+form ul li input[type=text]:focus, form ul li input[type=email]:focus, form ul li input[type=number]:focus, form ul li select:focus{
+    box-shadow: 0 0 0 2px var(--orange);
+}
+
+form ul li select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label span{
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+}
+
+form ul li legend{
+    margin-bottom: 10px;
+}
+
+.radio-container label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-container label .new-radio-button{
+    margin-right: 30px;
+}
+
+.radio-container input[type=radio]{
+    cursor: pointer;
+    display:none;
+}
+
+.radio-container .new-radio-button::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+}
+
+.radio-container .new-radio-button::after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    transform: translate(25%, 25%);
+    opacity: 0;
+}
+
+.radio-container input[type=radio]:checked ~ label .new-radio-button::after{
+    opacity: 1;
+}
+
+.radio-container input[type=radio]:hover ~ label .new-radio-button::after{
+    opacity: 1;
+    background-color: var(--orange);
+}
+
+
+
+
 
 
 

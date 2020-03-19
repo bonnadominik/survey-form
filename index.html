@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="fonts.css">
     <title>Survey Form</title>
 </head>
 <body>
@@ -45,24 +46,24 @@
                     <fieldset>
                         <legend>Would you recommend my survey to a friend?</legend>
                             <ul>
-                                <li class="radio-btn">
+                                <li class="radio-container">
                                     <input type="radio" id="recommend-choice-1" name="recommend-section" value="definitely">
-                                    <label for="recommend-choice-1">Definitely</label>
+                                    <label for="recommend-choice-1"><span class="new-radio-button"></span>Definitely</label>
                                 </li>
-                                <li class="radio-btn">
+                                <li class="radio-container">
                                     <input type="radio" id="recommend-choice-2" name="recommend-section" value="maybe">
-                                    <label for="recommend-choice-2">Maybe</label>
+                                    <label for="recommend-choice-2"><span class="new-radio-button"></span>Maybe</label>
                                 </li>
-                                <li class="radio-btn">
+                                <li class="radio-container">
                                     <input type="radio" id="recommend-choice-3" name="recommend-section" value="not-sure">
-                                    <label for="recommend-choice-3">Not sure</label>
+                                    <label for="recommend-choice-3"><span class="new-radio-button"></span>Not sure</label>
                                 </li>
                             </ul>
                     </fieldset>
                 </li>
                 <li>
-                    <label for="music-info">What kind of music do you like?</label>
-                    <select name="dropdown" id="music-info">
+                    <label for="dropdown-music">What kind of music do you like?</label>
+                    <select name="music-genre" id="dropdown-music">
                         <option value="default" selected disabled>Select an option</option>
                         <option value="pop">Pop</option>
                         <option value="rock">Rock</option>
@@ -100,7 +101,7 @@
                 </li>
                 <li>
                     <label for="comments">Any comments or suggestions?</label>
-                    <textarea name="comments" id="comments" cols="30" rows="10">Enter your comment here...</textarea>
+                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
                 </li>
                 <li>
                     <input type="submit" name="submit-btn" id="submit-btn" value="Submit">
