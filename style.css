@@ -10,11 +10,12 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
 body{
-    background:  url(/imgs/background.jpg) no-repeat fixed center;
+    background:  url(imgs/background.jpg) no-repeat fixed center;
     font-family: var(--roboto-condensed);
     color: #fff;
 }
@@ -48,9 +49,12 @@ main ul{
 }
 
 main{
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    height: 100%;
     background-color: var(--lightest-blue);;
     padding: 40px;
-    margin: 0 15px 0 15px;
+    margin: auto;
 }
 
 form ul li fieldset{
@@ -59,6 +63,18 @@ form ul li fieldset{
 
 form ul li fieldset legend{
     margin-bottom: 20px;
+}
+
+form ul li input::placeholder{
+    color: rgb(218, 218, 218);
+}
+
+form ul li input:-ms-input-placeholder{
+    color: rgb(218, 218, 218);
+}
+
+form ul li ::-webkit-input-placeholder{
+    color: rgb(218, 218, 218);
 }
 
 input::-webkit-outer-spin-button,
@@ -91,6 +107,10 @@ form ul li input[type=text]:focus, form ul li input[type=email]:focus, form ul l
     box-shadow: 0 0 0 2px var(--orange), 0 2px 4px rgb(0,0,0);
 }
 
+form ul li input:invalid{
+    box-shadow: 0 0 0 2px rgb(158, 51, 51), 0 2px 4px rgb(0,0,0);
+}
+
 label span{
     position: relative;
     top: -2px;
@@ -117,13 +137,13 @@ label span{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transform: translateY(10%);
+    transform: translateY(3px);
     background-color: var(--darkest-blue);
     position: absolute;
-    -webkit-transform: translateY(10%);
-    -moz-transform: translateY(10%);
-    -ms-transform: translateY(10%);
-    -o-transform: translateY(10%);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
 }
 
 .radio-container .new-radio-button::after{
@@ -133,12 +153,12 @@ label span{
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    transform: translate(35%, 50%);
     opacity: 0;
-    -webkit-transform: translate(35%, 50%);
-    -moz-transform: translate(35%, 50%);
-    -ms-transform: translate(35%, 50%);
-    -o-transform: translate(35%, 50%);
+    transform: translate(4px, 7px);
+    -webkit-transform: translate(4px, 7px);
+    -moz-transform: translate(4px, 7px);
+    -ms-transform: translate(4px, 7px);
+    -o-transform: translate(4px, 7px);
 }
 
 .radio-container input[type=radio]:checked ~ label .new-radio-button::after{
@@ -213,8 +233,11 @@ form ul li select{
     position: absolute;
     font-size: 16px;
     color: #fff;
-    top: 35%;
-    right: 3%;
+    transform: translate(-31px, 18px);
+    -webkit-transform: translate(-31px, 18px);
+    -moz-transform: translate(-31px, 18px);
+    -ms-transform: translate(-31px, 18px);
+    -o-transform: translate(-31px, 18px);
 }
 
 form ul li textarea{
@@ -242,35 +265,18 @@ form ul li input[type=submit]:hover{
 
 @media only screen and (min-width: 482px){
     main{
-        margin: 0 30px 0 30px;
+        max-width: calc(100% - 60px);
     }
 }
 
 @media only screen and (min-width: 720px){
     main{
-        margin: 0 70px 0 70px;
+        max-width: calc(100% - 200px);
     }
 }
 
-@media only screen and (min-width: 880px){
+@media only screen and (min-width: 1000px){
     main{
-        margin: 0 15% 0 15%;
+        max-width: 40vw;
     }
 }
-
-@media only screen and(min-width: 1194px){
-    main{
-        margin: 0 50vw 0 50vw;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
