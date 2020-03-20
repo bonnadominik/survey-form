@@ -35,6 +35,7 @@ header #description{
     padding-top: 30px;
     line-height: 1.3em;
     font-size: 1.2em;
+    color: rgb(216, 213, 213);
 }
 
 .background{
@@ -50,7 +51,14 @@ main{
     background-color: var(--lightest-blue);;
     padding: 40px;
     margin: 0 15px 0 15px;
-    border-radius: 6px;
+}
+
+form ul li fieldset{
+    border: none;
+}
+
+form ul li fieldset legend{
+    margin-bottom: 20px;
 }
 
 input::-webkit-outer-spin-button,
@@ -65,47 +73,28 @@ input[type=number] {
 
 form ul li{
     font-size: 20px;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
 }
 
 form ul li input[type=text], form ul li input[type=email],form ul li input[type=number], form ul li select, form ul li textarea{
     width: 100%;
     padding: 8px 15px;
-    box-shadow: 0 0 0 2px #fff;
     border: none;
-    border-radius: 5px;
     background-color: var(--darkest-blue);
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 15px;
     outline: none;
     color: #fff;
 }
 
-form ul li input[type=text]:focus, form ul li input[type=email]:focus, form ul li input[type=number]:focus, form ul li select:focus{
-    box-shadow: 0 0 0 2px var(--orange);
-}
-
-form ul li select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: none;
-}
-
-form ul li select::after{
-    content: '\25BC';
-    position: absolute;
-    color: black;
+form ul li input[type=text]:focus, form ul li input[type=email]:focus, form ul li input[type=number]:focus, form ul li select:focus, form ul li textarea:focus{
+    box-shadow: 0 0 0 2px var(--orange), 0 2px 4px rgb(0,0,0);
 }
 
 label span{
     position: relative;
     top: -2px;
     font-size: 12px;
-}
-
-form ul li legend{
-    margin-bottom: 10px;
 }
 
 .radio-container label{
@@ -128,20 +117,28 @@ form ul li legend{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    transform: translateY(10%);
     background-color: var(--darkest-blue);
     position: absolute;
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%);
 }
 
 .radio-container .new-radio-button::after{
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    transform: translate(22.5%, 22.5%);
+    transform: translate(35%, 50%);
     opacity: 0;
+    -webkit-transform: translate(35%, 50%);
+    -moz-transform: translate(35%, 50%);
+    -ms-transform: translate(35%, 50%);
+    -o-transform: translate(35%, 50%);
 }
 
 .radio-container input[type=radio]:checked ~ label .new-radio-button::after{
@@ -151,6 +148,7 @@ form ul li legend{
 .radio-container input[type=radio]:hover ~ label .new-radio-button::after{
     opacity: 1;
     background-color: var(--orange);
+    box-shadow: 0 1px 4px rgb(0,0,0);
 }
 
 .checkbox-container label{
@@ -168,7 +166,7 @@ form ul li legend{
     content: '';
     width: 20px;
     height: 20px;
-    border: 2px solid #fff;
+    transform: translateY(10%);
     background-color: var(--darkest-blue);
     position: absolute;
 }
@@ -176,8 +174,8 @@ form ul li legend{
 .checkbox-container .custom-checkbox::after{
     content: "\e901";
     position: absolute;
-    left: 3px;
-    bottom: -3px;
+    left: 1.5px;
+    bottom: -2px;
     font-size: 17px;
     opacity: 0;
 }
@@ -193,8 +191,78 @@ form ul li legend{
 .checkbox-container input[type=checkbox]:hover ~ label .custom-checkbox::after{
     opacity: 1;
     color: var(--orange);
+    box-shadow: 0 1px 4px rgb(0,0,0);
 }
 
+form ul li select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-container::after{
+    content: '\e900';
+    font-family: 'icomoon';
+    pointer-events: none;
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    top: 35%;
+    right: 3%;
+}
+
+form ul li textarea{
+    resize: none;
+}
+
+form ul li input[type=submit]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+form ul li input[type=submit]:hover{
+    background-color: var(--orange);
+    color: #fff;
+    box-shadow: 0 1px 4px rgb(0,0,0);
+}
+
+@media only screen and (min-width: 482px){
+    main{
+        margin: 0 30px 0 30px;
+    }
+}
+
+@media only screen and (min-width: 720px){
+    main{
+        margin: 0 70px 0 70px;
+    }
+}
+
+@media only screen and (min-width: 880px){
+    main{
+        margin: 0 15% 0 15%;
+    }
+}
+
+@media only screen and(min-width: 1194px){
+    main{
+        margin: 0 50vw 0 50vw;
+    }
+}
 
 
 
